@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <h1>Bookshelf Apps</h1>
+      <div class="navbar-extra">
+        <form action="" data-testid="searchBookForm">
+          <input
+            type="search"
+            id="search-box"
+            placeholder="Cari disini... "
+            data-testid="searchBookFormTitleInput" />
+          <button
+            class="search-button"
+            data-testid="searchBookFormSubmitButton">
+            Cari
+          </button>
+        </form>
+      </div>
+    </header>
+  </body>
+  <main>
+    <div class="container">
+      <div class="input_section" id="add-Book">
+        <h2>Input Buku Baru</h2>
+        <form class="form" action="#" id="form" data-testid="bookForm">
+          <div class="input">
+            <label for="title">Judul Buku</label><br />
+            <input
+              id="title"
+              placeholder="Masukan Judul Buku"
+              data-testid="bookFormTitleInput" /><br />
+          </div>
+          <div class="input">
+            <label for="author">Penulis</label><br />
+            <input
+              id="author"
+              placeholder="Masukan Nama Penulis Buku"
+              data-testid="bookFormAuthorInput" /><br />
+          </div>
+          <div class="input">
+            <label for="year">Tahun</label><br />
+            <input
+              id="year"
+              placeholder="Masukan Tahun Buku Terbit"
+              data-testid="bookFormYearInput" /><br />
+          </div>
+          <div>
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input
+              id="bookFormIsComplete"
+              type="checkbox"
+              data-testid="bookFormIsCompleteCheckbox" />
+          </div>
+          <div class="input">
+            <button
+              type="submit"
+              id="submit"
+              data-testid="bookFormSubmitButton">
+              Tambahkan Buku
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="bookshelf_section" data-testid="bookItem">
+        <div class="input_section">
+          <h3>Belum Selesai Dibaca</h3>
+          <div id="bookshelf" data-testid="incompleteBookList"></div>
+        </div>
+
+        <div class="input_section" data-testid="bookItemIsCompleteButton">
+          <h3>Selesai Dibaca</h3>
+          <div id="completed-bookshelf" data-testid="completeBookList"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <h3 class="design">Created by<span class="designer">Faqih</span></h3>
+    </div>
+  </footer>
+  <script src="script.js" type="text/javascript"></script>
+</html>
